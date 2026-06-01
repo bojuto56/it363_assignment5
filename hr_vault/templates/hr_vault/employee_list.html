@@ -1,0 +1,16 @@
+<h2>Employee Records</h2>
+
+<a href="{% url 'add_employee' %}">Add New Record</a>
+
+<ul>
+    {% for record in records %}
+        <li>
+            {{ record.employee_name }} |
+            {{ record.department }} |
+            {{ record.bank_account_number }} |
+            {{ record.annual_salary }}
+        </li>
+    {% empty %}
+        <li>No records found.</li>
+    {% endfor %}
+</ul>

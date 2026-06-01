@@ -1,0 +1,9 @@
+<h2>Add Employee Record</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Record</button>
+</form>
+
+<a href="{% url 'employee_list' %}">View Records</a>
